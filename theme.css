@@ -1,0 +1,543 @@
+/*
+
+Several sections of this CSS code have been adapted from the following sources:
+https://github.com/WebDevSimplified/JavaScript-Text-Adventure
+https://stackoverflow.com/questions/2735881/adding-images-to-an-html-document-with-javascript
+
+*/
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.eot');
+    src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular.woff2') format('woff2'),
+         url('fonts/Roboto-Regular.woff') format('woff'),
+         url('fonts/Roboto-Regular.ttf')  format('truetype'),
+         url('fonts/Roboto-Regular.svg#Roboto') format('svg');
+}
+
+
+@font-face {
+    font-family: 'MedievalSharp';
+    src: url('fonts/MedievalSharp-Regular.eot');
+    src: url('fonts/MedievalSharp-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/MedievalSharp-Regular.woff2') format('woff2'),
+         url('fonts/MedievalSharp-Regular.woff') format('woff'),
+         url('fonts/MedievalSharp-Regular.ttf')  format('truetype'),
+         url('fonts/MedievalSharp-Regular.svg#MedievalSharp') format('svg');
+}
+
+
+# Global Variables for colours, fonts and images.
+
+
+:root {
+	--radius: 6px;
+	--fontgrey: #6c757d;
+	--back: #181b21;
+	--white: #ffffff;
+}
+
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+
+
+body {
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 16px;
+	background-color: #181b21;
+	color: #d8d8d8;
+	-webkit-font-smoothing: antialiased;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+
+
+.first-image {
+	position: relative;
+	box-shadow: 0 0 20px 4px;
+	border-radius: 15px;
+	width: 1000px;
+	height: 580px;
+	top: 20px;
+}
+
+
+.torch1 {
+	position: fixed;
+	top: 100px;
+  left: 39%;
+}
+
+
+.torch2 {
+	position: fixed;
+	top: 100px;
+  left: 59%;
+}
+
+
+.start-container {
+	width: 1000px;
+	height: 770px;
+  max-width: 80%;
+  background-color: #181b21;
+	justify-content: center;
+  align-items: center;
+	color: black;
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+.start-btn {
+  background-color: #345e8e;
+  border: 3px solid hsl(359, 0%, 100%);
+  border-radius: 10px;
+	border-color: #d8d8d8;
+  padding: 30px 40px;
+  color: #d8d8d8;
+  outline: none;
+	font-weight: 600;
+	line-height: 1.6;
+	font-size: 26px;
+	width: 220px;
+	height: 100px;
+}
+
+
+.start-btn:hover {
+  border-color: #2c87f0;
+	color: #1dcf48;
+	border-width: medium;
+	cursor: pointer;
+}
+
+
+.audio-container {
+	width: 320px;
+	height: 520px;
+  max-width: 80%;
+  background-color: #22262e;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  align-items: center;
+	color: #000000;
+	position: absolute;
+	top: 190px;
+	left: 10px;
+}
+
+.musicplayer {
+  position: relative;
+  top: 220px;
+  width: 150px;
+  height: 150px;
+}
+
+/* CSS for music player */
+
+.iiSwdN {
+  position: absolute !important;
+  top: 240px !important;
+  left: 25px !important;
+}
+
+
+.user-container {
+	width: 320px;
+	height: 65px;
+  max-width: 80%;
+  background-color: #22262e;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  align-items: center;
+	color: #000000;
+	position: absolute;
+	top: 190px;
+	left: 1590px;
+}
+
+
+.playerText {
+  position: absolute;
+  margin: 20px;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+}
+
+
+mark.usernameTitle {
+  color: #2c87f0;
+  background-color: #22262e;
+  font-weight: 400;
+}
+
+
+.nav-bar {
+	background-color: #22262e;
+	z-index: 2;
+	width: 100%;
+	height: 50px;
+}
+
+
+.nav-bar a {
+	position: relative;
+	font-size: 26px;
+	cursor: pointer;
+	margin: 20px;
+	left: -14.5%;
+	top: 10%;
+}
+
+
+.main-title {
+	float: left;
+	font-size: 40px;
+	line-height: 38px;
+	margin: auto;
+	margin-left: 5px;
+	padding: 8px;
+	font-family: 'MedievalSharp';
+}
+
+
+.container {
+	width: 1180px;
+	height: 740px;
+  background-color: #22262e;
+	max-width: 80%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+	justify-content: center;
+  align-items: center;
+	color: black;
+  padding: 10px;
+	margin: auto;
+	margin-top: 60px;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	max-width: 80%;
+}
+
+
+.image-container {
+  width: 1160px;
+	height: 400px;
+  background-color: #22262e;
+	justify-content: center;
+  align-items: center;
+	color: white;
+	margin-top: 0px;
+  margin: auto;
+	text-align: center;
+	position: relative;
+}
+
+
+.game-text {
+	margin-top: 50px;
+	color: #d8d8d8;
+}
+
+
+.btn-grid {
+  display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+	justify-content: center;
+}
+
+
+.btn {
+  background-color: #345e8e;
+  border: 3px solid hsl(359, 0%, 100%);
+  border-radius: 10px;
+	border-color: #d8d8d8;
+  padding: 25px 25px;
+  color: #d8d8d8;
+  outline: none;
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 20px;
+}
+
+
+.btn:hover {
+  border-color: #2c87f0;
+	border-width: medium;
+	color: #1dcf48;
+	cursor: pointer;
+}
+
+
+.restart-btn {
+  background-color: #dc3545;
+  border: 4px solid hsl(359, 0%, 100%);
+  border-radius: 10px;
+	border-color: #d8d8d8;
+  padding: 20px 20px;
+  color: #d8d8d8;
+  outline: none;
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 24px;
+  position: relative;
+  top: 200px;
+}
+
+
+.restart-btn:hover {
+  border-color: #FFFFFF;
+	color: #FFFFFF;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+.simple-print {
+	fill: white;
+	stroke: white;
+}
+
+
+.simple-print svg {
+	height: 100%;
+}
+
+
+.simple-close {
+	color: white;
+	border-color: white;
+}
+
+
+.simple-ext-info {
+	border-top: 1px solid #aaa;
+}
+
+
+.game-images {
+  position: relative;
+
+  max-width: 120%;
+  max-height: 100%;
+}
+
+
+.electricbar {
+  margin: 10px;
+  padding: 0;
+  position: absolute;
+  left: 630px;
+
+}
+
+
+/*===============================
+SLIDESHOW CSS
+=============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+
+.index-container {
+  height: 1200px;
+  width: 1920px;
+  position: absolute;
+  overflow-y: auto;
+
+}
+
+.slideshow-container {
+  position: absolute;
+  left: 10%;
+  max-width: 80%;
+  align-self: center;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.slideshowCursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #22262e;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.slide {
+  opacity: 0.6;
+}
+
+.active,
+.slide:hover {
+  opacity: 1;
+}
+
+/*===============================
+SLIDESHOW CSS
+=============================== */
+
+
+
+
+
+p {
+	font-size: 16px;
+	text-align: center;
+	max-width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+h1 {
+	font-family: 'MedievalSharp';
+}
+
+
+h2 {
+	align-items: right;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+
+h3 {
+	font-size: 20px;
+	line-height: 27px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 5px;
+	color: #d8d8d8;
+}
+
+
+hr {
+	height: 2px;
+	background-color: #000000;
+	border: none;
+	width: 100%;
+	margin: 0px;
+}
+
+
+a[href] {
+	color: #1e8ad6;
+}
+
+
+a[href]:hover {
+	color: #3ba0e6;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+li {
+	line-height: 1.5em;
+}
+
+
+aside,
+[class *= "sidebar"],
+[id *= "sidebar"] {
+	max-width: 90%;
+	margin: 0 auto;
+	border: 1px solid lightgrey;
+	padding: 5px 15px;
+}
+
+
+A:link {COLOR: #6c757d; TEXT-DECORATION: none; font-weight: normal}
+A:visited {COLOR: #6c757d; TEXT-DECORATION: none; font-weight: normal}
+A:active {COLOR: #6c757d; TEXT-DECORATION: none}
+A:hover {COLOR: #2c87f0; TEXT-DECORATION: none; font-weight: none}

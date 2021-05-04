@@ -1,0 +1,74 @@
+<!--
+
+Several sections of this CSS code have been adapted from the following sources:
+https://github.com/WebDevSimplified/JavaScript-Text-Adventure
+https://apps.elfsight.com (Implemented the music player)
+-->
+
+
+<!DOCTYPE html>
+<html lang="en-GB">
+      <head>
+            <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+            <meta http-equiv="Pragma" content="no-cache">
+            <meta http-equiv="Expires" content="0">
+            <meta charset ="UTF-8" />
+            <link rel ="stylesheet " href ="theme.css" type ="text/css"/>
+            <title> Playing Four Corners </title>
+            <script defer src="Game.js"></script>
+            <link rel="icon" type="image/png" href="Img/favicon.png">
+
+            <h1 class="main-title"> The Four Corners of Glaschu </h1>
+            <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="Game.html">Game</a>
+            <a href="Info.html">About</a>
+            <a href="Author.html">Author</a>
+            </nav>
+      </head>
+
+      <body>
+        <img class="electricbar" src="img/electric.gif" alt="Electric Bar">
+        <section>
+            <div class="container">
+            <div class="image-container">
+            <img class="game-images" id="game-image" src="images/image.jfif" alt="Start Image">
+            </div>
+            <div class="game-text" id="text">Text</div>
+            <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+            </div>
+
+            <div class="audio-container">
+              <div id="text">
+              <h3>Play for extra immersion</h3>
+              </div>
+              <div id="option-buttons">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-1f5ec4cc-d8ba-4a0a-968c-3360c311ed1b"></div>
+
+                  <img class="musicplayer" src="img/musicplayer.gif" alt="Record Player">
+
+                  <button onclick="restartGame()" class="restart-btn">Restart Game</button>
+
+              </div>
+            </div>
+
+            <div class="user-container">
+              <h3 class="playerText" >Player :<mark class="usernameTitle" id="username"></mark> </h3>
+            </div>
+
+        </section>
+
+      </body>
+
+      <br>
+      <footer>
+      &copy; 2021 - Jordan Robertson - All rights reserved
+      <br>
+      </footer>
+</html>

@@ -1,0 +1,109 @@
+<!--
+
+Several sections of this code have been adapted from the following sources:
+https://stackoverflow.com/questions/2735881/adding-images-to-an-html-document-with-javascript
+https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en-GB">
+      <head>
+            <meta charset ="UTF-8" />
+            <link rel ="stylesheet " href ="theme.css" type ="text/css"/>
+            <title> Four Corners: Home </title>
+            <link rel="icon" type="image/png" href="Img/favicon.png">
+            <script defer src="slideshow.js"></script>
+            <h1 class="main-title"> The Four Corners of Glaschu </h1>
+            <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="Game.html">Game</a>
+            <a href="Info.html">About</a>
+            <a href="Author.html">Author</a>
+            </nav>
+      </head>
+
+      <body class="index-container">
+              <section>
+              <img src="Images/welcome.gif" style="position: relative; left: -15%;">
+              <p style="position: relative; width: 900px; left: 10px;">
+              Hello and welcome to the main web page of The Four Corners of Gaschu!
+              Please navigate via the top nav bar to the relating page you wanna check out but most of all have fun!
+              Below you will find a slideshow of relating images to the Glaschu project
+              </p>
+              </section>
+              <!-- Container for the image gallery -->
+              <div class="slideshow-container">
+
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="Slideshow/img1.jfif" style="width:1200px; height:700px;">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="Slideshow/img2.jfif" style="width:1200px; height:700px;">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="Slideshow/img3.jpg" style="width:1200px; height:700px;">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="Slideshow/img4.gif" style="width:1200px; height:700px;">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="Slideshow/img5.jfif" style="width:1200px; height:700px;">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="Slideshow/img6.jfif" style="width:1200px; height:700px;">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img1.jfif" style="width:250px; height:150px;" onclick="currentSlide(1)" alt="Glasgow necropolis">
+                  </div>
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img2.jfif" style="width:250px; height:150px;" onclick="currentSlide(2)" alt="Glasgow alleyway">
+                  </div>
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img3.jpg" style="width:250px; height:150px;" onclick="currentSlide(3)" alt="Glasgow railway works">
+                  </div>
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img4.gif" style="width:250px; height:150px;" onclick="currentSlide(4)" alt="Demon">
+                  </div>
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img5.jfif" style="width:250px; height:150px;" onclick="currentSlide(5)" alt="Small Stream">
+                  </div>
+                  <div class="column">
+                    <img class="slide slideshowCursor" src="Slideshow/img6.jfif" style="width:250px; height:150px;" onclick="currentSlide(6)" alt="Glasgow necropolis">
+                  </div>
+                </div>
+              </div>
+      </body>
+
+      <br>
+      <footer style="position:absolute; bottom: 10px; left:39%;">
+      &copy; 2021 - Jordan Robertson - All rights reserved
+      <br>
+      <a href="#top">Back to Top</a>
+      </footer>
+</html>
