@@ -272,12 +272,9 @@ const textNodes = [
     {
       id: 13,
       image: "images/reaper.gif",
-      text: 'You kill the guard and gain the power of the reaper',
+      text: 'You kill the guard and gain the power of the reaper! You Win!',
       options: [
-        {
-          text: 'Follow Satan',
-          nextText: 6
-        }
+
     ]
     },
     {
